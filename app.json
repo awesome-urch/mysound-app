@@ -1,0 +1,81 @@
+{
+  "expo": {
+    "name": "Lifetime",
+    "slug": "lifetime",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "lifetime",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/images/logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#161616"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.lifetime.app",
+      "buildNumber": "1",
+      "infoPlist": {
+        "UIBackgroundModes": ["audio"],
+        "NSPhotoLibraryUsageDescription": "Allow Lifetime to access your photos to let you choose profile pictures.",
+        "NSCameraUsageDescription": "Allow Lifetime to access your camera to let you take profile pictures.",
+        "NSMicrophoneUsageDescription": "Allow Lifetime to access your microphone"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#161616"
+      },
+      "package": "com.lifetime.app",
+      "permissions": [
+        "android.permission.MODIFY_AUDIO_SETTINGS",
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-av",
+        {
+          "microphonePermission": false
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you share them with your friends."
+        }
+      ],
+      [
+        "@stripe/stripe-react-native",
+        {
+          "version": "0.19.0",
+          "enableGooglePay": true
+        }
+      ],
+      "expo-font"
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "tsconfigPaths": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "29c3e8f9-768b-42b8-ad15-db893409b4ad"
+      }
+    },
+    "routes": {
+      "exclude": ["**/[id].tsx", "**/[id]/**"]
+    }
+  }
+}

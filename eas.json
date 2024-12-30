@@ -1,0 +1,50 @@
+{
+  "cli": {
+    "version": ">= 5.9.1"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "ios": {
+        "simulator": true,
+        "resourceClass": "m-medium"
+      },
+      "env": {
+        "EXPO_PUBLIC_API_URL": "https://mysounduk-service.com",
+        "EXPO_PUBLIC_CLOUDINARY_CLOUD_NAME": "dna7tnokp",
+        "EXPO_PUBLIC_CLOUDINARY_UPLOAD_PRESET": "mysound"
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "ios": {
+        "resourceClass": "m-medium"
+      },
+      "env": {
+        "EXPO_PUBLIC_API_URL": "https://mysounduk-service.com",
+        "EXPO_PUBLIC_CLOUDINARY_CLOUD_NAME": "dna7tnokp",
+        "EXPO_PUBLIC_CLOUDINARY_UPLOAD_PRESET": "mysound"
+      }
+    },
+    "production": {
+      "ios": {
+        "resourceClass": "m-medium"
+      },
+      "env": {
+        "EXPO_PUBLIC_API_URL": "https://mysounduk-service.com",
+        "EXPO_PUBLIC_CLOUDINARY_CLOUD_NAME": "dna7tnokp",
+        "EXPO_PUBLIC_CLOUDINARY_UPLOAD_PRESET": "mysound"
+      }
+    }
+  },
+  "submit": {
+    "production": {
+      "ios": {
+        "appleId": "devjaykes@gmail.com",
+        "ascAppId": "6479607839",
+        "appleTeamId": "H4J6N6P3PV"
+      }
+    }
+  }
+}
